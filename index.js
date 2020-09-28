@@ -9,6 +9,9 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
 
+  query = query.replace(/\//g, /\%2F/);
+  query = query.replace(/\%2F/g, /\//);
+
   searchData(query)
     .then((data) => {
       send(res, 200, data);
