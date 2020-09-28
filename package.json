@@ -10,6 +10,7 @@
     "dev": "nodemon --exec micro -p 4000 -w index.js"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "isomorphic-fetch": "^2.2.1",
     "micro": "^9.3.4",
     "url": "^0.11.0"

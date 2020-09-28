@@ -1,3 +1,4 @@
+require('dotenv').config();
 require('isomorphic-fetch');
 
 const { parse } = require('url');
@@ -18,4 +19,4 @@ module.exports = async (req, res) => {
 };
 
 const searchData = (query) =>
-  fetch(`https://example.com/${query}`).then((resp) => resp.json());
+  fetch(`${process.env.URL}/${query}`).then((resp) => resp.json());
